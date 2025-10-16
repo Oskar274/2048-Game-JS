@@ -41,14 +41,15 @@ startButton.addEventListener('click', () => {
   render(game.board);
 
   if (!restart) {
+    startButton.classList.add('restart');
     startButton.textContent = 'Restart';
-    startButton.style.backgroundColor = '#f87474';
     startButton.style.fontSize = '16px';
     restart = true;
   } else {
     startButton.textContent = 'Start';
     startButton.style.backgroundColor = '#1dae28';
     startButton.style.fontSize = '20px';
+    game.score = 0;
     restart = false;
   }
 });
