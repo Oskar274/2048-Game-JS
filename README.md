@@ -1,69 +1,49 @@
-# 2048 game
+# DEMO LINK - https://oskar274.github.io/js_2048_game/
 
-Hey! Are you ready for a real hard check of your JavaScript skills, ninja?
-If you are still here, let's do it.
+# 🎮 2048 Game
 
-In this task, you need to implement the 2048 game like in [this reference](https://play2048.co/)
-Don't play for too long! We need you to write the code!
+A classic 2048 puzzle game built with vanilla JavaScript. 
+Combine matching tiles by sliding them in four directions to reach the 2048 tile.
 
-Okay, what do we have?
-1) HTML and CSS are already written. You can use it, or implement your own design if you want.
-2) Base `Game` class structure is already written too. Extend it with your own methods. Obligatory methods (used in tests):
-  - constructor with `initialState` parameter (value is optional, defaults to the empty board)
-  - `getState()`
-  - `getScore()`
-  - `getStatus()`
-  - `moveLeft()`
-  - `moveRight()`
-  - `moveUp()`
-  - `moveDown()`
-  - `start()`
-  - `restart()`
+## 📋 Description
 
-3) Reference.
+A fully playable implementation of the popular 2048 game, featuring keyboard controls, 
+score tracking, win/lose detection, and a restart button. Built without any frameworks 
+to practice core JavaScript, DOM manipulation, and game logic.
 
-That's it!
+## 🛠️ Technologies
 
-Okay, okay. Also, we have some rules:
-1) The game field is 4 x 4
-2) Each cell can be empty or contain one of the numbers: 2, 4, 8 ... 2^n
-3) The player can move cells with keyboard arrows
-4) All the numbers should be moved in the selected direction until all empty cells are filled in
-   - 2 equal cells should be merged into a doubled number
-   - The merged cell can’t be merged twice during one move
-5) The move is possible if at least one cell is changed after the move
-6) After move 2 or 4 appears in a random empty cell. 4 probability is 10%
-7) When 2048 value is displayed in any cell, win message should be shown.
-8) The `game over` message should be shown if there are no more available moves.
-9) Hide start message when game starts.
-10) Change the `Start` button to `Restart` after the first move.
-11) `Restart` button should reset the game to the initial state.
-12) Increase score with each move. The score should be increased by the sum of all merged cells.
-13) The game consists of 2 main parts:
-  - game logic written in `src/modules/Game.class.js` module that exports `Game` class
-  - game UI written in `src/index.html` with `main.js` script that need to use `Game` class instance
+- **HTML5** — semantic markup
+- **SCSS (Sass)** — CSS preprocessor, modular structure
+- **JavaScript (Vanilla)** — game logic, board state, tile merging algorithm, keyboard event handling
+- **CSS3** — flexbox/grid layout, animations for tile movement
 
-Hints:
-- You have class `field-cell--%cell_value%`, for styling cell in the game.
-- Use `hidden` class for hiding elements on page.
-- Use `start`, `restart` classes for the main button for different styles.
-- Use `field-cell--%cell_value%` class like additional class, don't replace the main class.
-- Use `keydown` event and `event.key` property to handle arrow buttons presses
-    ```js
-    document.addEventListener('keydown', event => console.log(event.key));
-    ```
-- Adding animation to the game is optional. It is a bit tricky, but you can try it if you want. Probably, you will need to extend the Game class with additional methods and create a separate board storage with Tile entities to operate their corresponding DOM elements' positions.
+## 🚀 Quick Start
 
-You can change the HTML/CSS layout if you need it.
+1. Clone the repository:
+```bash
+   git clone https://github.com/Oskar274/js_2048_game.git
+   cd js_2048_game
+```
 
-![Preview](./src/images/reference.png)
+2. Install dependencies:
+```bash
+   npm install
+```
 
-## Deploy and Pull Request
+3. Start the development server:
+```bash
+   npm start
+```
 
-1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://Oskar274.github.io/js_2048_game/)
-2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-    - Run `npm run test` command to test your code;
-    - Run `npm run test:only -- -n` to run fast test ignoring linter;
-    - Run `npm run test:only -- -l` to run fast test with additional info in console ignoring linter.
+4. Open the app in your browser at the address shown in the terminal 
+   (usually `http://localhost:3000` or similar).
 
+## 🎯 How to Play
+
+- Use **arrow keys** (↑ ↓ ← →) to move tiles.
+- Tiles with the same number merge into one when they touch.
+- Reach the **2048** tile to win.
+- The game ends when there are no more possible moves.
+
+## 📁 Project Structure
