@@ -22,8 +22,8 @@ to practice core JavaScript, DOM manipulation, and game logic.
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/Oskar274/js_2048_game.git
-   cd js_2048_game
+   git clone https://github.com/Oskar274/2048-Game-JS
+   cd 2048-Game-JS
 ```
 
 2. Install dependencies:
@@ -45,5 +45,3 @@ to practice core JavaScript, DOM manipulation, and game logic.
 - Tiles with the same number merge into one when they touch.
 - Reach the **2048** tile to win.
 - The game ends when there are no more possible moves.
-
-## 📁 Project Structure
